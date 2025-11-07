@@ -1,9 +1,27 @@
-import './App.css'
+import Navigation from "./components/Navigation";
+import Home from "./pages/home";
+import About from "./pages/about";
+import Projectpage from "./pages/projectpage";
+import Projectdetail from "./pages/Projectdetail";
+import Contact from "./pages/contact";
+import Nopage from "./pages/Nopage";
+import "./App";
+import {BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return ()
+  return (
+    <BrowserRouter>
+      <Navigation />
+      <Routes>
+        <Route index path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/projectpage" element={<Projectpage />} />
+        <Route path="/projectdetail/:id" element={<Projectdetail />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<Nopage />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
