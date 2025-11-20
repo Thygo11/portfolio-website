@@ -5,7 +5,7 @@ import Projectpage from "./pages/projectpage";
 import Projectdetail from "./pages/Projectdetail";
 import Contact from "./pages/contact";
 import Nopage from "./pages/Nopage";
-import "./App";
+import "./App.css";
 import {BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -19,6 +19,8 @@ function App() {
         <Route path="/projectdetail/:id" element={<Projectdetail />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<Nopage />} />
+        <Route path="/" element={<Projectpage />} />
+        <Route path="/project/:id" element={<Projectdetail />} />
       </Routes>
     </BrowserRouter>
   );

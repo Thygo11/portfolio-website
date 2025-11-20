@@ -12,8 +12,6 @@ function Home() {
             en doe de opleiding <strong>Front-end Developer</strong>. 
             Ik wil graag nog veel leren zodat ik in de toekomst bij een goed bedrijf terecht kan komen!
           </p>
-
-          <button className="start-button">Laten we beginnen </button>
         </div>
 
         <div className="home-image">

@@ -20,9 +20,6 @@ const Navigation = () => {
           <li>
             <Link className={`nav-link ${location.pathname === '/projectpage' ? 'active' : ''}`} to="/projectpage">Projectpage</Link>
           </li>
-          <li>
-            <Link className={`nav-link ${location.pathname === '/projectdetail' ? 'active' : ''}`} to="/projectdetail">Projectdetail</Link>
-          </li>
         </ul>
       </nav>
 
