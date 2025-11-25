@@ -1,5 +1,5 @@
-import { Link, Outlet, useLocation } from 'react-router-dom';
-import '../App.css'; 
+import { Link, Outlet, useLocation } from "react-router-dom";
+import "../App.css";
 
 const Navigation = () => {
   const location = useLocation();
@@ -8,18 +8,51 @@ const Navigation = () => {
     <>
       <nav className="navbar">
         <ul className="nav-list">
+
           <li>
-            <Link className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} to="/">Home</Link>
+            <Link
+              className={`nav-link nav-home ${
+                location.pathname === "/" ? "active" : ""
+              }`}
+              to="/"
+            >
+              Home
+            </Link>
           </li>
+
           <li>
-            <Link className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} to="/about">Over Ons</Link>
+            <Link
+              className={`nav-link nav-about ${
+                location.pathname === "/about" ? "active" : ""
+              }`}
+              to="/about"
+            >
+              Over Ons
+            </Link>
           </li>
+
           <li>
-            <Link className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`} to="/contact">Contact</Link>
+            <Link
+              className={`nav-link nav-contact ${
+                location.pathname === "/contact" ? "active" : ""
+              }`}
+              to="/contact"
+            >
+              Contact
+            </Link>
           </li>
+
           <li>
-            <Link className={`nav-link ${location.pathname === '/projectpage' ? 'active' : ''}`} to="/projectpage">Projectpage</Link>
+            <Link
+              className={`nav-link nav-projectpage ${
+                location.pathname === "/projectpage" ? "active" : ""
+              }`}
+              to="/projects"
+            >
+              Projectpage
+            </Link>
           </li>
+
         </ul>
       </nav>
 

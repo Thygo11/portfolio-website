@@ -1,31 +1,22 @@
-import "../App";
+import "../App.css";
 
-const Contact = () => {
+export default function Contact() {
   return (
-    <section className="contact-section">
+    <div className="contact-section">
       <h1 className="contact-title">Contact</h1>
 
       <form className="contact-form">
-        <label htmlFor="email">Email</label>
-        <input type="email" id="email" placeholder="Vul email" required />
+        <label>Naam</label>
+        <input type="text" placeholder="Voer je naam in" required />
 
-        <label htmlFor="mobile">Mobile</label>
-        <input type="tel" id="mobile" placeholder="Vul nummer" required />
+        <label>Email</label>
+        <input type="email" placeholder="Voer je email in" required />
 
-        <label htmlFor="message">Message</label>
-        <textarea
-          id="message"
-          rows="5"
-          placeholder="Bericht"
-          required
-        ></textarea>
+        <label>Bericht</label>
+        <textarea rows="5" placeholder="Typ je bericht..." required></textarea>
 
-        <button type="submit" className="contact-button">
-          Versturen <span className="arrow">›</span>
-        </button>
+        <button className="contact-button">Verstuur <span className="arrow">→</span></button>
       </form>
-    </section>
+    </div>
   );
-};
-
-export default Contact;
+}

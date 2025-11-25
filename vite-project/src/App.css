@@ -1,3 +1,5 @@
+/* ---------------- HOME ---------------- */
+
 .home-container {
   background-color: #3f3f3f;
   color: white;
@@ -37,23 +39,6 @@
   color: #ddd;
 }
 
-.start-button {
-  margin-top: 25px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  padding: 12px 22px;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  font-weight: bold;
-}
-
-.start-button:hover {
-  background-color: #45a049;
-}
-
 .home-image img {
   width: 180px;
   height: 220px;
@@ -62,12 +47,12 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
 }
 
+/* ---------------- NAVIGATION ---------------- */
+
 .navbar {
-  background-color: #1f2937; 
+  background-color: #1f2937;
   padding: 1rem 2rem;
-
 }
-
 
 .nav-list {
   display: flex;
@@ -77,18 +62,16 @@
   padding: 0;
 }
 
-
 .nav-link {
-  color: #f9fafb; 
+  color: #3b82f6;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s, border-bottom 0.3s;
 }
 
 .nav-link:hover {
-  color: #3b82f6; 
+  color: #3b82f6;
 }
-
 
 .nav-link.active {
   border-bottom: 2px solid #3b82f6;
@@ -96,91 +79,192 @@
   color: #3b82f6;
 }
 
+/* ---------------- PROJECTS PAGE ---------------- */
 
-.nav-home { color: #f87171; }       
-.nav-about { color: #34d399; }      
-.nav-contact { color: #60a5fa; }   
-.nav-projectpage { color: #facc15; } 
-.nav-projectdetail { color: #a78bfa; }
-
-
-.nav-home:hover { color: #ef4444; }
-.nav-about:hover { color: #10b981; }
-.nav-contact:hover { color: #3b82f6; }
-.nav-projectpage:hover { color: #eab308; }
-.nav-projectdetail:hover { color: #8b5cf6; }
-.projectpage {
+.projects {
   background-color: #3f3f3f;
+  padding: 4rem 2rem;
+  text-align: center;
   color: white;
-  min-height: 100vh;
-  padding: 40px;
 }
 
-.projectpage-title {
-  font-size: 2rem;
-  margin-bottom: 3rem;
-  color: #111;
+.projects-title {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 50px;
+  font-weight: 700;
 }
 
-.project-grid {
+.project-row {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 2rem;
-  flex-wrap: wrap;
-  max-width: 1100px;
-  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 120px;
 }
 
-.project-card {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-  width: 480px;
-  text-align: left;
+.project-row.reverse {
+  flex-direction: row-reverse;
 }
 
-.project-image {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 1rem;
+.project-photo {
+  width: 45%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.project-card h2 {
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-  color: #222;
-}
-
-.project-card p {
+.project-text {
+  width: 45%;
   font-size: 1rem;
-  line-height: 1.6;
-  color: #444;
-  margin-bottom: 1.5rem;
+  line-height: 1.7;
 }
 
-.project-button {
-  background-color: #84cc16;
+.project-label {
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.orange {
+  background-color: #ffcc80;
+  color: #5a3a00;
+}
+
+.blue {
+  background-color: #90a4ff;
+  color: #001c66;
+}
+
+.green {
+  background-color: #8fe3c2;
+  color: #004d29;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.2s ease;
+  letter-spacing: 0.5px;
+}
+
+.orange-btn {
+  background-color: #ffa726;
   color: white;
-  border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.3s;
 }
 
-.project-button:hover {
-  background-color: #65a30d;
+.orange-btn:hover {
+  background-color: #fb8c00;
 }
+
+.blue-btn {
+  background-color: #304ffe;
+  color: white;
+}
+
+.blue-btn:hover {
+  background-color: #1a36d9;
+}
+
+.green-btn {
+  background-color: #26c485;
+  color: white;
+}
+
+.green-btn:hover {
+  background-color: #1ea971;
+}
+
+@media (max-width: 900px) {
+  .project-row,
+  .project-row.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-photo,
+  .project-text {
+    width: 100%;
+  }
+
+  .project-photo {
+    margin-top: 20px;
+  }
+}
+
+/* ---------------- PROJECT DETAIL PAGE ---------------- */
+
+.project-detail {
+  min-height: 100vh;
+  background-color: #2d2d2d;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.project-detail-title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  color: #90a4ff;
+}
+
+.project-detail-image {
+  width: 75%;
+  max-width: 700px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px;
+}
+
+.project-detail-description {
+  max-width: 800px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ddd;
+  margin-bottom: 35px;
+}
+
+.project-detail .btn {
+  padding: 14px 35px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .project-detail-title {
+    font-size: 2rem;
+  }
+
+  .project-detail-image {
+    width: 100%;
+  }
+
+  .project-detail-description {
+    font-size: 1rem;
+  }
+}
+
+/* ---------------- ABOUT PAGE ---------------- */
+
 .about-section {
   min-height: 100vh;
   background-color: #2d2d2d;
   color: #f1f1f1;
   display: flex;
   flex-direction: column;
-  align-items: center;a
+  align-items: center;
   justify-content: start;
   padding: 40px 20px;
 }
@@ -193,7 +277,7 @@
 }
 
 .about-box {
-  border: 2px solid #3b82f6; /* Blauw kader */
+  border: 2px solid #3b82f6;
   background-color: #3a3a3a;
   border-radius: 10px;
   padding: 25px;
@@ -210,6 +294,9 @@
 .about-box strong {
   color: #5fa8ff;
 }
+
+/* ---------------- CONTACT PAGE ---------------- */
+
 .contact-section {
   min-height: 100vh;
   background-color: #3f3f3f;
@@ -254,7 +341,7 @@
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  box-shadow: 0 0 0 2px #4ade80; /* lichte groene rand bij focus */
+  box-shadow: 0 0 0 2px #4ade80;
 }
 
 .contact-button {
@@ -270,131 +357,10 @@
 }
 
 .contact-button:hover {
-  background-color: #43a047; 
+  background-color: #43a047;
 }
 
 .arrow {
   margin-left: 6px;
   font-size: 18px;
-}
-
-.projectpage {
-  background-color: #3f3f3f;
-  padding: 4rem 2rem;
-  text-align: center;
-  color: white;
-}
-
-
-.projectpage-title {
-  text-align: center;
-  font-size: 2.4rem;
-  margin-bottom: 50px;
-  font-weight: 700;
-}
-
-
-.project-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 120px;
-}
-
-
-.project-row.reverse {
-  flex-direction: row-reverse;
-}
-
-
-.project-photo {
-  width: 45%;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-
-.project-text {
-  width: 45%;
-  font-size: 1rem;
-  line-height: 1.7;
-}
-
-
-.project-label {
-  display: inline-block;
-  padding: 6px 18px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-bottom: 14px;
-}
-
-.orange {
-  background-color: #ffcc80;
-  color: #5a3a00;
-}
-
-.blue {
-  background-color: #90a4ff;
-  color: #001c66;
-}
-
-.green {
-  background-color: #8fe3c2;
-  color: #004d29;
-}
-
-
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 25px;
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.2s ease;
-  letter-spacing: 0.5px;
-}
-
-.orange-btn {
-  background-color: #ffa726;
-  color: white;
-}
-.orange-btn:hover {
-  background-color: #fb8c00;
-}
-
-.blue-btn {
-  background-color: #304ffe;
-  color: white;
-}
-.blue-btn:hover {
-  background-color: #1a36d9;
-}
-
-.green-btn {
-  background-color: #26c485;
-  color: white;
-}
-.green-btn:hover {
-  background-color: #1ea971;
-}
-
-
-@media (max-width: 900px) {
-  .project-row,
-  .project-row.reverse {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .project-photo,
-  .project-text {
-    width: 100%;
-  }
-
-  .project-photo {
-    margin-top: 20px;
-  }
 }
