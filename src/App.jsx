@@ -10,7 +10,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter basename="portfolio-website">
+    <BrowserRouter basename="vite-project">
       <Navigation />
 
       <Routes>
