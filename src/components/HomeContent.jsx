@@ -12,7 +12,7 @@ function HomeContent() {
       </div>
 
       <div className="home-image">
-        <img src="./images/ik.png" alt="Thygo Huigen" />
+        <img src="/images/ik.png" alt="Thygo Huigen" />
       </div>
     </div>
   );
