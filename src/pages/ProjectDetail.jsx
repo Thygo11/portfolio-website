@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { projects } from "../data/data";
 
 export default function ProjectDetail() {
@@ -19,13 +19,12 @@ export default function ProjectDetail() {
 
       <p className="project-detail-description">{project.description}</p>
 
-      <a
-        href={project.link}
+      <Link
+        to="/projects"
         className={`btn ${project.color}-btn`}
-        target="_blank"
       >
-        Open project
-      </a>
+        Terug naar projecten
+      </Link>
     </div>
   );
 }

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function ProjectCard({ title, description, image, color, link }) {
   return (
     <>
@@ -8,9 +10,9 @@ export default function ProjectCard({ title, description, image, color, link }) 
 
         <p>{description}</p>
 
-        <a href={link} className={`btn ${color}-btn`}>
+        <Link to={link} className={`btn ${color}-btn`}>
           Bekijk project
-        </a>
+        </Link>
       </div>
     </>
   );

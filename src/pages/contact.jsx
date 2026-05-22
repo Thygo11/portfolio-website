@@ -6,16 +6,16 @@ export default function Contact() {
       <h1 className="contact-title">Contact</h1>
 
       <form className="contact-form">
-        <label>Naam</label>
-        <input type="text" placeholder="Voer je naam in" required />
+        <label htmlFor="naam">Naam</label>
+        <input type="text" id="naam" name="naam" placeholder="Voer je naam in" required />
 
-        <label>Email</label>
-        <input type="email" placeholder="Voer je email in" required />
+        <label htmlFor="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Voer je email in" required />
 
-        <label>Bericht</label>
-        <textarea rows="5" placeholder="Typ je bericht..." required></textarea>
+        <label htmlFor="bericht">Bericht</label>
+        <textarea id="bericht" name="bericht" rows="5" placeholder="Typ je bericht..." required></textarea>
 
-        <button className="contact-button">Verstuur <span className="arrow">→</span></button>
+        <button type="submit" className="contact-button">Verstuur <span className="arrow">→</span></button>
       </form>
     </div>
   );
