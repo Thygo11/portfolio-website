@@ -10,7 +10,7 @@ export default function Home() {
         </div>
 
         <div className="home-image">
-          <img src="/images/ik.png" alt="home" />
+          <img src="./images/ik.png" alt="home" />
         </div>
       </div>
     </div>
